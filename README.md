@@ -19,9 +19,6 @@ Learn More
 About Us
 
 Military Logistics Services LLC is committed to sustainable development and top-tier maintenance solutions.
-Gallery
-Military Vehicle 1 Military Vehicle 2 Maintenance in Action
-Contact Us
-Name: Email: Message:
+
 
 © 2024 Military Logistics Services LLC. All Rights Reserved.
