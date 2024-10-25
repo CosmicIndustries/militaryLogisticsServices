@@ -7,71 +7,67 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="hero">
+
+    <!-- Hero Section -->
+    <section class="hero">
         <h1>Military Logistics Services LLC</h1>
         <p class="slogan">Military-Grade Maintenance for Every Mission</p>
-        <a href="#about" class="cta-button">Learn More About Us</a>
-    </header>
+        <a href="#contact" class="cta-button">Contact Us</a>
+    </section>
 
     <!-- Mission Section -->
     <section id="mission">
         <h2>Our Mission</h2>
-        <p>Committed to military-grade precision in maintenance services, serving both civilian and military communities with honor and excellence.</p>
+        <p>Providing military-grade maintenance and logistics support with unwavering dedication and precision.</p>
     </section>
 
     <!-- Services Section -->
     <section id="services">
-        <h2>Key Services</h2>
+        <h2>Our Services</h2>
         <ul>
-            <li>Maintenance and Logistics</li>
-            <li>Transportation Support and Hauling</li>
-            <li>Custom Military Gear</li>
-            <li>Veteran Outreach Programs</li>
+            <li>Equipment Maintenance</li>
+            <li>Vehicle Logistics</li>
+            <li>Supply Chain Support</li>
+            <li>On-Demand Repairs</li>
         </ul>
-        <a href="#services-details" class="learn-more">Learn More</a>
+        <a href="#mission" class="learn-more">Learn More</a>
     </section>
 
     <!-- About Us Section -->
     <section id="about">
         <h2>About Us</h2>
-        <p>Our journey from military service to logistics, our commitment to sustainable practices, and our passion for supporting veterans and communities.</p>
+        <p>Military Logistics Services LLC is committed to sustainable development and top-tier maintenance solutions.</p>
     </section>
 
     <!-- Gallery Section -->
     <section id="gallery">
         <h2>Gallery</h2>
-        <!-- Add image URLs for the gallery -->
         <div class="gallery-images">
-            <img src="truck.jpg" alt="Military Truck in Action">
-            <img src="event.jpg" alt="Community Event">
+            <img src="images/truck1.jpg" alt="Military Vehicle 1">
+            <img src="images/truck2.jpg" alt="Military Vehicle 2">
+            <img src="images/maintenance.jpg" alt="Maintenance in Action">
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Phone: (123) 456-7890 | Email: info@militarylogisticsservices.com</p>
-        <form action="submit_form.php" method="POST">
-            <label for="name">Name</label>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-
-            <label for="message">Message</label>
+            <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-
-            <label>
-                <input type="checkbox" name="veteran"> Check here if you’re a veteran
-            </label>
-
-            <button type="submit">Submit</button>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Military Logistics Services LLC. All rights reserved.</p>
+        <p>&copy; 2024 Military Logistics Services LLC. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
