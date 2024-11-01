@@ -4,62 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Military Logistics Services</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to Content</a>
+
     <!-- Night Mode Toggle Button -->
     <button class="toggle-night-mode" onclick="toggleNightMode()" aria-label="Toggle Night Mode">Toggle Night Mode</button>
 
     <!-- Logo Header -->
-    <header>
-        <img src="logo2.jpg" alt="Military Logistics Services Logo" role="img" aria-label="Company Logo">
+    <header role="banner">
+        <img src="Images/logo2.jpg" alt="Military Logistics Services Logo" role="img" aria-label="Company Logo">
         <h1>Military Logistics Services</h1>
     </header>
 
-    <!-- Boilerplate Section -->
-    <section id="boilerplate" aria-labelledby="about-title">
-        <h2 id="about-title">About Us</h2>
-        <p>
-            Military Logistics Services provides end-to-end solutions for efficient and secure transportation, supply, and support operations. We are committed to delivering reliable logistics services tailored to meet the unique demands of military and defense sectors, ensuring readiness and operational success in any environment.
-        </p>
-    </section>
+    <!-- Main Content Area -->
+    <main id="main-content" role="main">
+        <!-- Boilerplate Section -->
+        <section id="boilerplate" aria-labelledby="about-title">
+            <h2 id="about-title">About Us</h2>
+            <p>
+                Military Logistics Services provides end-to-end solutions for efficient and secure transportation, supply, and support operations.
+                We are committed to delivering reliable logistics services tailored to meet the unique demands of military and defense sectors.
+            </p>
+        </section>
 
-    <!-- Fleet Gallery Section -->
-    <section aria-labelledby="fleet-title">
-        <h2 id="fleet-title" class="section-title">Our Fleet</h2>
-        <div class="gallery" aria-live="polite" aria-label="Fleet Image Gallery">
-            <img src="truck1.jpg" alt="Truck 1 in service">
-            <img src="truck2.jpg" alt="Truck 2 side view">
-            <img src="truck2Far.jpg" alt="Truck 2 distant view">
-            <img src="truck3.jpg" alt="Truck 3 front view">
-            <img src="truck3F.jpg" alt="Truck 3 closer front view">
-            <img src="truck3L.jpg" alt="Truck 3 left side view">
-            <img src="truck4.jpg" alt="Truck 4 parked">
-            <img src="truck4far.jpg" alt="Truck 4 distant view">
-        </div>
-    </section>
+        <!-- Fleet Gallery Section -->
+        <section aria-labelledby="fleet-title">
+            <h2 id="fleet-title" class="section-title">Our Fleet</h2>
+            <div class="gallery" aria-live="polite" aria-label="Fleet Image Gallery">
+                <img src="Images/truck1.jpg" alt="Truck 1 in service">
+                <img src="Images/truck2.jpg" alt="Truck 2 side view">
+                <!-- More images... -->
+            </div>
+        </section>
 
-    <!-- Maintenance Section -->
-    <section aria-labelledby="maintenance-title">
-        <h2 id="maintenance-title" class="section-title">Maintenance and Support</h2>
-        <div class="gallery" aria-live="polite">
-            <img src="maintenance.jpg" alt="Maintenance team working on equipment">
-        </div>
-    </section>
+        <!-- Maintenance Section -->
+        <section aria-labelledby="maintenance-title">
+            <h2 id="maintenance-title" class="section-title">Maintenance and Support</h2>
+            <div class="gallery" aria-live="polite">
+                <img src="Images/maintenance.jpg" alt="Maintenance team working on equipment">
+            </div>
+        </section>
 
-    <!-- Logo Gallery Section -->
-    <section aria-labelledby="logo-gallery-title">
-        <h2 id="logo-gallery-title" class="section-title">Our Brand Logos</h2>
-        <div class="gallery" aria-live="polite" aria-label="Company Logo Gallery">
-            <img src="logo.jpg" alt="Official Logo">
-            <img src="logo1.jpg" alt="Logo Variation 1">
-            <img src="logo2.jpg" alt="Logo Variation 2">
-            <img src="logo3.jpg" alt="Logo Variation 3">
-            <img src="logo4.jpg" alt="Logo Variation 4">
-            <img src="logo5.jpg" alt="Logo Variation 5">
-        </div>
-    </section>
+        <!-- Logo Gallery Section -->
+        <section aria-labelledby="logo-gallery-title">
+            <h2 id="logo-gallery-title" class="section-title">Our Brand Logos</h2>
+            <div class="gallery" aria-live="polite" aria-label="Company Logo Gallery">
+                <img src="Images/logo.jpg" alt="Official Logo">
+                <img src="Images/logo1.jpg" alt="Logo Variation 1">
+                <!-- More logos... -->
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; Military Logistics Services. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-            </html>
+</html>
