@@ -1,232 +1,112 @@
-/* General Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
+/* Body Styling */
 body {
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
     color: #333;
+    line-height: 1.6;
+    background-color: #e4d9c1; /* Light desert tan */
+    background-image: url('camo-pattern-light.jpg');
+    background-size: cover;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Night Mode */
+body.night-mode {
+    background-color: #2d2d2d;
+    background-image: url('camo-pattern-dark.jpg');
+    color: #e0e0e0;
+}
+
+/* High-Contrast Focus States */
+button:focus, a:focus, img:focus {
+    outline: 3px solid #007bff; /* Blue for accessibility contrast */
+    outline-offset: 3px;
+}
+
+/* Header Section */
+header, .hero {
+    text-align: center;
+    padding: 20px;
+    background: rgba(240, 240, 240, 0.85);
+    backdrop-filter: blur(5px);
+    transition: background 0.3s;
+}
+
+header img {
+    width: 150px;
 }
 
 .hero {
-    background-color: #333;
     color: #fff;
-    text-align: center;
     padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
+    font-size: 3rem;
 }
 
-.hero .slogan {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    color: #ccc;
-}
-
-.cta-button {
-    background-color: #FF4500;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #E43D00;
-}
-
-/* Mission Section */
-#mission {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#mission h2 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-#mission p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Services Section */
-#services {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#services h2 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-#services ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#services ul li {
-    font-size: 1.2em;
+.slogan {
+    font-size: 1.5rem;
     margin: 10px 0;
 }
 
-.learn-more {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #333;
+/* Toggle Button Styling */
+.toggle-night-mode {
+    background: #007bff;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.learn-more:hover {
-    background-color: #444;
-}
-
-/* About Us Section */
-#about {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#about p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Gallery Section */
-#gallery {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#gallery .gallery-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-#gallery img {
-    width: 300px;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Contact Section */
-#contact {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#contact form {
-    display: inline-block;
-    max-width: 500px;
-    width: 100%;
-    text-align: left;
-}
-
-#contact form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-#contact form input,
-#contact form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contact form textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-#contact form button {
-    display: block;
-    margin-top: 15px;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-night-mode:hover, .toggle-night-mode:focus {
+    background-color: #0056b3;
+}
+
+/* Sections Styling */
+section {
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: normal;
+    color: #444;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
-#contact form button:hover {
-    background-color: #444;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #services ul li,
-    #mission p,
-    #about p,
-    #contact form label {
-        font-size: 1em;
-    }
-    
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero .slogan {
-        font-size: 1.2em;
-    }
-    
-    #gallery .gallery-images {
-        flex-direction: column;
-    }
-
-    #gallery img {
-        width: 90%;
-    }
-}
-
-/* Overlay for Popup Image */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
+.gallery img:hover, .gallery img:focus {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
