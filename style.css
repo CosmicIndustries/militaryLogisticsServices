@@ -90,3 +90,80 @@ footer {
 body.night-mode footer {
     background: var(--night-secondary);
 }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #e4d9c1; /* Light desert tan */
+    background-image: url('camo-pattern-light.jpg');
+    background-size: cover;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Night Mode */
+body.night-mode {
+    background-color: #2d2d2d;
+    background-image: url('camo-pattern-dark.jpg');
+    color: #e0e0e0;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(240, 240, 240, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+header .logo {
+    width: 100px; /* Smaller logo */
+}
+
+/* Navigation Links */
+.nav-links a {
+    color: #007bff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        color: #fff;
+        display: block;
+    }
+    
