@@ -1,11 +1,12 @@
-// Toggle Night Mode
+// Night Mode Toggle
 function toggleNightMode() {
     document.body.classList.toggle('night-mode');
 }
 
 // Toggle Mobile Menu Visibility
 function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('show');
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
 }
 
 // Smooth Scrolling for Anchor Links
