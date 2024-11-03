@@ -12,24 +12,28 @@
     <!-- Night Mode Toggle Button -->
     <button class="toggle-night-mode" onclick="toggleNightMode()" aria-label="Toggle Night Mode">Toggle Night Mode</button>
 
-    <!-- Logo Header -->
+    <!-- Responsive Header with Smaller Logo -->
     <header role="banner">
-        <img src="logo2.jpg" alt="Military Logistics Services Logo" role="img" aria-label="Company Logo">
+        <img src="logo2.jpg" alt="Military Logistics Services Logo" class="logo" role="img" aria-label="Company Logo">
         <h1>Military Logistics Services</h1>
+        
+        <!-- Hamburger Menu for Mobile View -->
+        <nav role="navigation" aria-label="Main Navigation" class="nav-menu">
+            <button aria-label="Toggle Navigation Menu" class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="about.html">About Us</a>
+                <a href="fleet.html">Our Fleet</a>
+                <a href="maintenance.html">Maintenance & Support</a>
+                <a href="logos.html">Our Brand Logos</a>
+            </div>
+        </nav>
     </header>
-
-    <!-- Navigation Links for Page Sections -->
-    <nav role="navigation">
-        <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="fleet.html">Our Fleet</a></li>
-            <li><a href="maintenance.html">Maintenance & Support</a></li>
-            <li><a href="logos.html">Our Brand Logos</a></li>
-        </ul>
-    </nav>
 
     <!-- Main Content Area -->
     <main id="main-content" role="main">
+        <!-- Boilerplate Section -->
         <section id="boilerplate" aria-labelledby="about-title">
             <h2 id="about-title">About Us</h2>
             <p>
