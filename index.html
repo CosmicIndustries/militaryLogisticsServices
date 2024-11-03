@@ -31,14 +31,51 @@
         </nav>
     </header>
 
+    <!-- Main Content Area -->
     <main id="main-content" role="main">
-        <!-- Content here -->
+        <!-- Boilerplate Section -->
+        <section id="boilerplate" aria-labelledby="about-title">
+            <h2 id="about-title">About Us</h2>
+            <p>
+                Military Logistics Services provides end-to-end solutions for efficient and secure transportation, supply, and support operations.
+                We are committed to delivering reliable logistics services tailored to meet the unique demands of military and defense sectors.
+            </p>
+        </section>
+
+        <!-- Fleet Gallery Section -->
+        <section id="fleet" aria-labelledby="fleet-title">
+            <h2 id="fleet-title">Our Fleet</h2>
+            <div class="gallery" aria-live="polite" aria-label="Fleet Image Gallery">
+                <img src="truck1.jpg" alt="Truck 1 in service">
+                <img src="truck2.jpg" alt="Truck 2 side view">
+                <!-- More images... -->
+            </div>
+        </section>
+
+        <!-- Maintenance Section -->
+        <section id="maintenance" aria-labelledby="maintenance-title">
+            <h2 id="maintenance-title">Maintenance and Support</h2>
+            <div class="gallery" aria-live="polite">
+                <img src="maintenance.jpg" alt="Maintenance team working on equipment">
+            </div>
+        </section>
+
+        <!-- Logo Gallery Section -->
+        <section id="logos" aria-labelledby="logo-gallery-title">
+            <h2 id="logo-gallery-title">Our Brand Logos</h2>
+            <div class="gallery" aria-live="polite" aria-label="Company Logo Gallery">
+                <img src="logo.jpg" alt="Official Logo">
+                <img src="logo1.jpg" alt="Logo Variation 1">
+                <!-- More logos... -->
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer role="contentinfo">
         <p>&copy; 2024 Military Logistics Services. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
