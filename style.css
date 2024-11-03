@@ -1,112 +1,122 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Root Variables for Color Themes */
+:root {
+    --desert-bg: #d3b593;
+    --desert-secondary: #a68a67;
+    --desert-accent: #5a4b3b;
+    --desert-contrast: #e4d5b2;
+
+    --night-bg: #1b2c47;
+    --night-secondary: #39475b;
+    --night-accent: #536678;
+    --night-contrast: #a3b1c6;
+
+    --font-color: #333;
+    --font-color-contrast: #ffffff;
 }
 
-/* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
     line-height: 1.6;
-    background-color: #e4d9c1; /* Light desert tan */
-    background-image: url('camo-pattern-light.jpg');
-    background-size: cover;
-    transition: background 0.3s, color 0.3s;
+    color: var(--font-color);
+    background-color: var(--desert-bg);
+    transition: all 0.4s ease;
 }
 
-/* Night Mode */
+/* Dark Mode */
 body.night-mode {
-    background-color: #2d2d2d;
-    background-image: url('camo-pattern-dark.jpg');
-    color: #e0e0e0;
-}
-
-/* High-Contrast Focus States */
-button:focus, a:focus, img:focus {
-    outline: 3px solid #007bff; /* Blue for accessibility contrast */
-    outline-offset: 3px;
-}
-
-/* Header Section */
-header, .hero {
-    text-align: center;
-    padding: 20px;
-    background: rgba(240, 240, 240, 0.85);
-    backdrop-filter: blur(5px);
-    transition: background 0.3s;
-}
-
-header img {
-    width: 150px;
-}
-
-.hero {
-    color: #fff;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-}
-
-.slogan {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-/* Toggle Button Styling */
-.toggle-night-mode {
-    background: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.toggle-night-mode:hover, .toggle-night-mode:focus {
-    background-color: #0056b3;
-}
-
-/* Sections Styling */
-section {
-    padding: 40px 20px;
+    background-color: var(--night-bg);
+    color: var(--font-color-contrast);
 }
 
 h1, h2 {
-    margin: 0;
-    font-weight: normal;
-    color: #444;
+    color: var(--desert-accent);
+    transition: color 0.4s ease;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+body.night-mode h1, body.night-mode h2 {
+    color: var(--night-contrast);
 }
 
-/* Gallery Styling */
+/* Header */
+header {
+    background: linear-gradient(45deg, var(--desert-secondary), var(--desert-accent));
+    padding: 20px;
+    text-align: center;
+    color: var(--font-color-contrast);
+    transition: background 0.4s ease;
+}
+
+body.night-mode header {
+    background: linear-gradient(45deg, var(--night-secondary), var(--night-accent));
+}
+
+/* Gallery */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     padding: 20px;
 }
 
 .gallery img {
     width: 100%;
-    max-width: 200px;
     border-radius: 8px;
-    transition: transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.gallery img:hover, .gallery img:focus {
+.gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+/* Buttons */
+button.toggle-theme {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: var(--desert-contrast);
+    color: var(--font-color-contrast);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+
+body.night-mode button.toggle-theme {
+    background: var(--night-contrast);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--desert-secondary);
+    color: var(--font-color-contrast);
+    transition: background 0.4s ease;
+}
+
+body.night-mode footer {
+    background: var(--night-secondary);
+}
+
+/* Accessibility and Responsive Design */
+.skip-to-content {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    transition: left 0.3s ease;
+}
+
+.skip-to-content:focus {
+    left: 10px;
+    top: 10px;
+    background: var(--desert-contrast);
+    color: var(--font-color-contrast);
+    padding: 5px;
+    z-index: 100;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    }
