@@ -19,7 +19,9 @@
 
         <!-- Hamburger Menu for Mobile View -->
         <nav role="navigation" aria-label="Main Navigation" class="nav-menu">
-            <button aria-label="Toggle Navigation Menu" class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <button aria-label="Toggle Navigation Menu" class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </button>
             <div class="nav-links" id="navLinks">
                 <a href="about.html">About Us</a>
                 <a href="fleet.html">Our Fleet</a>
@@ -31,10 +33,18 @@
 
     <!-- Main Content Area -->
     <main id="main-content" role="main">
-        <!-- Sections for About Us, Fleet, Maintenance, Logos, etc. -->
+        <!-- Boilerplate Section -->
+        <section id="boilerplate" aria-labelledby="about-title">
+            <h2 id="about-title">About Us</h2>
+            <p>
+                Military Logistics Services provides end-to-end solutions for efficient and secure transportation, supply, and support operations.
+                We are committed to delivering reliable logistics services tailored to meet the unique demands of military and defense sectors.
+            </p>
+        </section>
+
+        <!-- More sections (fleet, maintenance, logos) here -->
     </main>
 
-    <!-- Footer -->
     <footer role="contentinfo">
         <p>&copy; 2024 Military Logistics Services. All Rights Reserved.</p>
     </footer>
