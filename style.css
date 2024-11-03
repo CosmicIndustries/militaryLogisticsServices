@@ -10,7 +10,8 @@
     --night-accent: #536678;
     --contrast-color-dark: #a3b1c6;
 
-    --font-color: #333;
+    /* Update the font color to your previous preference */
+    --font-color: #333;  /* You can adjust this to your desired color */
     --font-color-contrast: #ffffff;
 }
 
@@ -137,14 +138,24 @@ body.night-mode footer {
     .nav-links {
         display: none; /* Hidden by default */
         flex-direction: column;
-        background-color: #333;
+        background-color: var(--desert-secondary);
         position: absolute;
-        top: 50px; /* Adjust based on header height */
+        top: 100%; /* Below the header */
+        left: 0;
         right: 0;
-        width: 100%;
+        padding: 10px 0;
     }
 
     .nav-links.show {
-        display: flex; /* Show when toggled */
+        display: flex; /* Show menu when toggled */
+    }
+
+    .nav-links a {
+        padding: 10px 20px; /* Add padding for touch targets */
+        border-top: 1px solid #ccc; /* Add separation between items */
+    }
+
+    .nav-links a:first-child {
+        border-top: none; /* Remove top border from first item */
     }
         }
