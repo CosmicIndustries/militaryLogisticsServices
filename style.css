@@ -1,122 +1,92 @@
-/* Root Variables for Color Themes */
+/* Root Variables for Theme Colors */
 :root {
-    --desert-bg: #d3b593;
+    --desert-primary: #d3b593;
     --desert-secondary: #a68a67;
     --desert-accent: #5a4b3b;
-    --desert-contrast: #e4d5b2;
+    --contrast-color: #007bff;
 
-    --night-bg: #1b2c47;
+    --night-primary: #1b2c47;
     --night-secondary: #39475b;
     --night-accent: #536678;
-    --night-contrast: #a3b1c6;
+    --contrast-color-dark: #a3b1c6;
 
     --font-color: #333;
     --font-color-contrast: #ffffff;
 }
 
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--font-color);
-    background-color: var(--desert-bg);
-    transition: all 0.4s ease;
+    background-color: var(--desert-primary);
+    transition: background-color 0.4s, color 0.4s;
 }
 
-/* Dark Mode */
 body.night-mode {
-    background-color: var(--night-bg);
+    background-color: var(--night-primary);
     color: var(--font-color-contrast);
 }
 
 h1, h2 {
     color: var(--desert-accent);
-    transition: color 0.4s ease;
+    transition: color 0.4s;
 }
 
 body.night-mode h1, body.night-mode h2 {
-    color: var(--night-contrast);
+    color: var(--night-accent);
 }
 
-/* Header */
-header {
-    background: linear-gradient(45deg, var(--desert-secondary), var(--desert-accent));
-    padding: 20px;
-    text-align: center;
-    color: var(--font-color-contrast);
-    transition: background 0.4s ease;
+/* Accessible Focus Styles */
+button:focus, a:focus, img:focus {
+    outline: 3px solid var(--contrast-color);
+    outline-offset: 2px;
 }
 
-body.night-mode header {
-    background: linear-gradient(45deg, var(--night-secondary), var(--night-accent));
+button:focus.night-mode, a:focus.night-mode, img:focus.night-mode {
+    outline: 3px solid var(--contrast-color-dark);
 }
 
-/* Gallery */
+/* Gallery Styles */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
     padding: 20px;
 }
 
 .gallery img {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
 }
 
-/* Buttons */
-button.toggle-theme {
+.overlay {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    background: var(--desert-contrast);
-    color: var(--font-color-contrast);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.4s ease;
-}
-
-body.night-mode button.toggle-theme {
-    background: var(--night-contrast);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
     background: var(--desert-secondary);
     color: var(--font-color-contrast);
-    transition: background 0.4s ease;
+    text-align: center;
+    padding: 10px;
 }
 
 body.night-mode footer {
     background: var(--night-secondary);
 }
-
-/* Accessibility and Responsive Design */
-.skip-to-content {
-    position: absolute;
-    left: -999px;
-    top: -999px;
-    transition: left 0.3s ease;
-}
-
-.skip-to-content:focus {
-    left: 10px;
-    top: 10px;
-    background: var(--desert-contrast);
-    color: var(--font-color-contrast);
-    padding: 5px;
-    z-index: 100;
-}
-
-@media (max-width: 600px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    }
