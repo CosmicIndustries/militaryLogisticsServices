@@ -7,23 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to Content</a>
 
-<header>
-    <h1>About Us</h1>
-    <a href="index.html">Back to Home</a>
-</header>
+    <!-- Night Mode Toggle Button -->
+    <button class="toggle-night-mode" onclick="toggleNightMode()" aria-label="Toggle Night Mode">Toggle Night Mode</button>
 
-<main>
-    <section>
-        <h2>Who We Are</h2>
-        <p>Military Logistics Services provides efficient and secure logistics solutions tailored to military and defense needs.</p>
-    </section>
-</main>
+    <!-- Responsive Header with Hamburger Menu -->
+    <header role="banner">
+        <img src="logo2.jpg" alt="Military Logistics Services Logo" class="logo" role="img" aria-label="Company Logo">
+        <h1>Military Logistics Services</h1>
 
-<footer>
-    <p>&copy; 2024 Military Logistics Services. All Rights Reserved.</p>
-</footer>
-<script src="script.js">
-</script>
+        <!-- Hamburger Menu for Mobile View -->
+        <nav role="navigation" aria-label="Main Navigation" class="nav-menu">
+            <button aria-label="Toggle Navigation Menu" class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="fleet.html">Our Fleet</a>
+                <a href="maintenance.html">Maintenance & Support</a>
+                <a href="logos.html">Our Brand Logos</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" role="main">
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About Us</h2>
+            <p>
+                Military Logistics Services provides end-to-end solutions for efficient and secure transportation, supply, and support operations.
+                We are committed to delivering reliable logistics services tailored to meet the unique demands of military and defense sectors.
+            </p>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2024 Military Logistics Services. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-</html>
+                </html>
