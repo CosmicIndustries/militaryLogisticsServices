@@ -10,16 +10,8 @@
     --night-accent: #536678;
     --contrast-color-dark: #a3b1c6;
 
-    /* Update the font color to your previous preference */
-    --font-color: #333;  /* You can adjust this to your desired color */
+    --font-color: #333;
     --font-color-contrast: #ffffff;
-}
-
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 /* Base Styles */
@@ -55,49 +47,6 @@ body.night-mode button:focus, body.night-mode a:focus, body.night-mode img:focus
     outline: 3px solid var(--contrast-color-dark);
 }
 
-/* Header Styling */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-}
-
-.logo {
-    width: 100px;
-}
-
-/* Nav Menu Styling */
-.nav-menu {
-    position: relative;
-}
-
-.hamburger {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    display: none; /* Hidden by default */
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-/* Nav Link Styles */
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    color: var(--contrast-color);
-}
-
 /* Gallery Styles */
 .gallery {
     display: flex;
@@ -107,7 +56,8 @@ header {
 }
 
 .gallery img {
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     height: auto;
     border-radius: 5px;
     transition: transform 0.3s;
@@ -115,6 +65,19 @@ header {
 
 .gallery img:hover {
     transform: scale(1.05);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
 /* Footer */
@@ -129,6 +92,69 @@ body.night-mode footer {
     background: var(--night-secondary);
 }
 
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+/* Nav Menu Styling */
+.nav-menu {
+    position: relative;
+}
+
+.hamburger {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--font-color-contrast);
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    background-color: var(--desert-secondary);
+    border-radius: 5px;
+}
+
+.nav-links a {
+    color: var(--font-color-contrast);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    color: var(--contrast-color);
+}
+
+/* Night Mode Styles for Nav Links */
+body.night-mode .nav-links {
+    background-color: var(--night-secondary);
+}
+
+body.night-mode .nav-links a {
+    color: var(--font-color-contrast);
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .hamburger {
@@ -136,26 +162,15 @@ body.night-mode footer {
     }
 
     .nav-links {
-        display: none; /* Hidden by default */
-        flex-direction: column;
-        background-color: var(--desert-secondary);
-        position: absolute;
-        top: 100%; /* Below the header */
-        left: 0;
-        right: 0;
-        padding: 10px 0;
+        flex-direction: column; /* Stack links vertically on small screens */
+        display: none; /* Initially hide the dropdown */
+        width: 100%; /* Make dropdown full width */
+        position: absolute; /* Position it absolutely */
+        background-color: var(--desert-secondary); /* Set background */
+        z-index: 100; /* Ensure it appears above other content */
     }
 
     .nav-links.show {
-        display: flex; /* Show menu when toggled */
+        display: flex; /* Show dropdown when activated */
     }
-
-    .nav-links a {
-        padding: 10px 20px; /* Add padding for touch targets */
-        border-top: 1px solid #ccc; /* Add separation between items */
     }
-
-    .nav-links a:first-child {
-        border-top: none; /* Remove top border from first item */
-    }
-        }
